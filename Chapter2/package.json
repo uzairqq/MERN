@@ -14,6 +14,7 @@
     "babel-preset-react": "^6.24.1"
   },
   "scripts": {
+    "compile": "babel public --presets react --out-dir static",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
