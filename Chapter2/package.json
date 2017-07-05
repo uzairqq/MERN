@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "4.5": "^0.5.0",
+    "babel-preset-es2015": "^6.24.1",
     "express": "^4.15.3",
     "mongodb": "^2.2.29",
     "node": "0.0.0",
@@ -16,8 +17,8 @@
     "babel-preset-react": "^6.24.1"
   },
   "scripts": {
-    "compile": "babel public --presets react --out-dir static",
-    "watch": "babel public --presets react --out-dir static --watch",
+    "compile": "babel public --presets react,es2015 --out-dir static",
+    "watch": "babel public --presets react,es2015 --out-dir static --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
