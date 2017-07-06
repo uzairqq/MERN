@@ -1,3 +1,9 @@
-var contentNode=document.getElementById('contents');
-var component=<h1>Hello World uzairnpm r </h1>;
+const contentNode=document.getElementById('contents');
+
+const continents=['pakistan','china','india','iran'];
+
+var message=continents.map(c=>`Hello ${c}!`).join('  ');
+
+var component=<p>{message}</p>
+
 ReactDOM.render(component,contentNode);
