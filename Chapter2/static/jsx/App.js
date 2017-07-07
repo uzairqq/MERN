@@ -25,7 +25,25 @@ var IssueList = function (_React$Component) {
             return React.createElement(
                 'div',
                 null,
-                'this is the placeholder of issue list'
+                'this is the placeholder of issue list',
+                React.createElement('br', null),
+                React.createElement(
+                    'span',
+                    null,
+                    'uzair',
+                    React.createElement('br', null)
+                ),
+                React.createElement(
+                    'span',
+                    null,
+                    'iqbal',
+                    React.createElement('br', null)
+                ),
+                React.createElement(
+                    'span',
+                    null,
+                    'laraib'
+                )
             );
         }
     }]);
