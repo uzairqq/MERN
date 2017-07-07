@@ -1,9 +1,12 @@
 const contentNode=document.getElementById('contents');
 
-const continents=['pakistan','china','india','iran'];
-
-var message=continents.map(c=>`Hello ${c}!`).join('  ');
-
-var component=<p>{message}</p>
-
-ReactDOM.render(component,contentNode);
+class IssueList extends React.Component
+{
+    render()
+    {
+        return(
+            <div>this is the placeholder of issue list</div>
+        )
+    }
+}
+ReactDOM.render(<IssueList/>,contentNode);
