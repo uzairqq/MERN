@@ -1,47 +1,46 @@
 const contentNode=document.getElementById('contents');
 
 
-class IssueFilter extends React.Component
+
+
+
+class IssueTable extends React.Component {
+ render() {
+ const borderedStyle = {border: "1px solid silver", padding: 6};
+ return (
+ <table style={{borderCollapse: "collapse"}}>
+ <thead>
+ <tr>
+ <th style={borderedStyle}>Id</th>
+ <th style={borderedStyle}>Title</th>
+ </tr>
+ </thead>
+ <tbody>
+ <IssueRow issue_id={1}
+ issue_name="Error in console when clicking Add" />
+ <IssueRow issue_id={2}
+ issue_name="Missing bottom border on panel" />
+  <IssueRow issue_id={3}
+ issue_name="competitor services are not working " />
+ </tbody>
+ </table>
+ )
+ }
+}
+class IssueRow extends React.Component
 {
     render()
     {
+        const borderedStyle={border:"1px solid silver",padding:4};
         return(
-            <div>This is a placeholder for the Issue Filter.</div>
+            <tr>
+            <td style={borderedStyle}>{this.props.issue_id}</td>
+            <td style={borderedStyle}>{this.props.issue_name}</td>
+            </tr>
+            
         )
     }
 }
-class IssueAdd extends React.Component
-{
-    render()
-    {
-        return(
-        <div>This is a placeholder for an Issue Add entry form.</div>
-        )
-    }
-}
-class IssueTable extends React.Component
-{
-    render(){
-        return(
-            <div>This is a placeholder for a table of Issues.</div>
-        )
-    }
-}
-class IssueList extends React.Component
-{
-    render()
-    {
-        return(
-            <div>
-                <h1>Issue Tracker</h1>
-                <IssueFilter/>
-                <hr/>
-                <IssueAdd/>
-                <hr/>
-                <IssueTable/>
-                <hr/>
-            </div>
-        )
-    }
-}
-ReactDOM.render(<IssueList/>,contentNode);
+
+
+ReactDOM.render(<IssueTable/>,contentNode);
